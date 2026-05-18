@@ -31,9 +31,71 @@
         <section class="section">
             <div class="container">
                 <h1>Ajukan Layanan Akademik</h1>
-                <p class="section-desc"><em>🚧 Coming Soon — Form pengajuan akan tersedia pada tahap berikutnya.</em>
-                </p>
-                <a href="index.html" class="btn btn-outline">← Kembali ke Beranda</a>
+                <p class="section-desc"><em>lengkapi Form dibawah ini untuk Melanjutkan layanan Akademik Anda.</em></p>
+                <!-- nama lengkap, nim . program studi , jenis layanan , tanggal pengajuan , keterangan  -->
+                <!-- awal form -->
+                <form action="#" target="_blank" method="post">
+                    <fieldset>
+                        <legend>Data Pengajuan</legend>
+                        <!-- input nama lengkap -->
+                         <div class="form-group">
+                            <label for="nama">Nama lengkap</label>
+                            <input type="text" id="nama">
+                         </div>
+                         <!-- input nim dan program studi-->
+                         <div>
+                            <!-- nim -->
+                            <div class="form-group" >
+                                <label for="nim">NIM</label>
+                                <input type="text" id="nim">
+                            </div>
+                            <!-- program studi -->
+                            <div class="form-group" >
+                                <label for="prodi">Program Studi</label>
+                                <!-- agar mudah di css -->
+                                <div></div>
+                                <select name="prodi" id="prodi">
+                                    <option value="">-- Pilih Program Studi --</option>
+                                    <option value="Sistem Informasi">Sistem Informasi</option>
+                                    <option value="Teknik Informatika">Teknik Informatika</option>
+                                    <option value="Teknologi Informasi">Teknologi Informasi</option>
+                                    <option value="Manajemen">Manajemen</option>
+                                    <option value="Akuntansi">Akuntansi</option>
+                                </select>
+                                </div>
+                            </div>
+                                 <!-- jenis layanan -->
+                            <div class="form-group" >
+                                <label for="jenis">Jenis Layanan</label>
+                                <!-- agar mudah di css -->
+                                <div>
+                                <select name="jenis" id="jenis">
+                                    <option value="">-- Pilih Layanan --</option>
+                                    <option value="SKA">SKA - Surat Aktif Kuliah</option>p
+                                    <option value="CAK">CAK - Cuti Akademik</option>
+                                    <option value="TNM">TNM - Transkip Akademik</option>
+                                    <option value="PDA">PDA - Perubahan Data</option>
+                                </select>
+                                </div>
+                                <!-- tanggal -->
+                                 <div class="form-group">
+                                    <label for="tanggal">Tanggal Pengajuan</label>
+                                    <input type="date" id="tanggal" name="tanggal">
+                                 </div>
+                            </div>
+                                <!-- keterangan -->
+                            <div class="form-group">
+                                <label for="keterangan">keterangan</label>
+                                <input type="text" id="keterangan">
+                            </div>
+                                <!-- button -->
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">🚀 Ajukan Sekarang</button>
+                                <button type="reset" class="btn btn-outline">🚀 reset </button>
+                            </div>
+            </div>
+                    </fieldset>
+                </form>
             </div>
         </section>
     </main>
