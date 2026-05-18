@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
- 
+
 <body>
- 
+
     <!-- HEADER & NAVIGASI -->
     <header class="navbar">
         <div class="container navbar-inner">
             <a href="index.html" class="logo">🎓 SILA</a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html">Beranda</a></li>
@@ -26,35 +32,38 @@
             </nav>
         </div>
     </header>
- 
+
     <main>
         <section class="section">
             <div class="container">
                 <h1>Ajukan Layanan Akademik</h1>
-                <p class="section-desc"><em>lengkapi Form dibawah ini untuk Melanjutkan layanan Akademik Anda.</em></p>
-                <!-- nama lengkap, nim . program studi , jenis layanan , tanggal pengajuan , keterangan  -->
-                <!-- awal form -->
-                <form action="#" target="_blank" method="post">
+                <p class="section-desc">Lengkapi form di bawah untuk mengajukan layanan akademik Anda.</p>
+
+                <!-- Nama lengkap, NIM, Prodi, Jenis layanan, Tanggal pngajuan, Kterangan -->
+                <!-- awal FORM -->
+                <form action="#" target="_blank" method="post" class="form-card">
                     <fieldset>
                         <legend>Data Pengajuan</legend>
-                        <!-- input nama lengkap -->
-                         <div class="form-group">
-                            <label for="nama">Nama lengkap</label>
-                            <input type="text" id="nama">
-                         </div>
-                         <!-- input nim dan program studi-->
-                         <div>
+
+                        <!-- Input Nama Lengkap -->
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" required placeholder="masukkan nama lengkap">
+                        </div>
+
+                        <!-- Nim dan Prodi -->
+                        <div class="form-row">
                             <!-- nim -->
-                            <div class="form-group" >
+                            <div class="form-group">
                                 <label for="nim">NIM</label>
-                                <input type="text" id="nim">
+                                <input type="text" id="nim" required placeholder="contoh 241121###">
                             </div>
                             <!-- program studi -->
-                            <div class="form-group" >
+                            <div class="form-group">
                                 <label for="prodi">Program Studi</label>
                                 <!-- agar mudah di css -->
                                 <div></div>
-                                <select name="prodi" id="prodi">
+                                <select name="prodi" id="prodi" required>
                                     <option value="">-- Pilih Program Studi --</option>
                                     <option value="Sistem Informasi">Sistem Informasi</option>
                                     <option value="Teknik Informatika">Teknik Informatika</option>
@@ -62,44 +71,46 @@
                                     <option value="Manajemen">Manajemen</option>
                                     <option value="Akuntansi">Akuntansi</option>
                                 </select>
-                                </div>
                             </div>
-                                 <!-- jenis layanan -->
-                            <div class="form-group" >
-                                <label for="jenis">Jenis Layanan</label>
-                                <!-- agar mudah di css -->
-                                <div>
-                                <select name="jenis" id="jenis">
-                                    <option value="">-- Pilih Layanan --</option>
-                                    <option value="SKA">SKA - Surat Aktif Kuliah</option>p
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="jenis">Jenis Layanan</label >
+                                <select name="jenis" id="jenis" required>
+                                    <option value="">--Pilih Layanan</option>
+                                    <option value="SKA">SKA - Surat Aktif Kuliah</option>
                                     <option value="CAK">CAK - Cuti Akademik</option>
-                                    <option value="TNM">TNM - Transkip Akademik</option>
+                                    <option value="TNM">TNM - Transkrip Akademik</option>
                                     <option value="PDA">PDA - Perubahan Data</option>
                                 </select>
-                                </div>
-                                <!-- tanggal -->
-                                 <div class="form-group">
-                                    <label for="tanggal">Tanggal Pengajuan</label>
-                                    <input type="date" id="tanggal" name="tanggal">
-                                 </div>
                             </div>
-                                <!-- keterangan -->
+                            <!-- Tanggal -->
                             <div class="form-group">
-                                <label for="keterangan">keterangan</label>
-                                <input type="text" id="keterangan">
+                                <label for="tanggal">Tanggal Pengajuan</label >
+                                <input type="date" id="tanggal" name="tanggal" required>
                             </div>
-                                <!-- button -->
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary">🚀 Ajukan Sekarang</button>
-                                <button type="reset" class="btn btn-outline">🚀 reset </button>
-                            </div>
-            </div>
+                        </div>
+                        <!-- Keterangan -->
+                        <div class="form-group">
+                            <label for="Keterangan">Keterangan</label>
+                            <textarea name="keterangan" id="keterangan" rows="3"placeholder="Jelaskan alasan pengajuan anda" required ></textarea>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="form-action">
+                            <button type="submit" class="btn btn-primary">🚀 Ajukan Sekarang</button>
+                            <button type="reset" class="btn btn-outline">↺ Reset</button>
+                        </div>
                     </fieldset>
                 </form>
+                <!-- awal FORM -->
+
             </div>
         </section>
     </main>
- 
+
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container footer-inner">
             <div>
@@ -121,7 +132,6 @@
             </div>
         </div>
     </footer>
- 
+
 </body>
- 
 </html>

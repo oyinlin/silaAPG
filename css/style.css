@@ -560,3 +560,85 @@ display: flex;
 .hero{
     animation: fadeIn 0.7s ease ;
 }
+
+/* ----------- layanan----------- */
+.form-card{
+    max-width: 640px;
+    /* lebar max form  */
+    margin: 0 auto;
+    /* tengah halman  */
+}
+
+fieldset{
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 24px;
+    background-color: #1e293b;
+}
+
+legend{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    padding: 0 8px;
+}
+
+/* formm group 
+1 kelompok 1 label + 1 input */
+
+.form-group{
+    margin-bottom: 16px;
+}
+
+.form-group label{
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-bottom: 6px;
+    /* jarak label ke input */
+}
+
+/* semua field lebar sama 100%, padding, warna gelap dan border tipis */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: #0f172a;
+    border-radius: 8px;
+    color: #e2e8f0;
+    font-family: inherit;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+ 
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+}
+ 
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+ 
+.form-actions {
+display: flex;
+gap: 12px;
+margin-top: 24px;
+}
+ 
+.form-actions .btn {
+cursor: pointer;
+border: none;
+font-family: inherit;
+}
+ 
+.form-actions .btn-outline {
+border: 1px solid #334155;
+background: none;
+}
