@@ -642,3 +642,63 @@ font-family: inherit;
 border: 1px solid #334155;
 background: none;
 }
+
+
+/* m11 tabel */
+
+.data-tabel {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    min-width: 600px;
+    /* lebar batas mutlak*/
+}
+
+.data-tabel caption{
+    text-align: left;
+    font-size: 0.85rem;
+    color: #475569;
+    margin-bottom: 12px;
+}
+
+.data-tabel th,
+.data-tabel td{
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #334155;
+    /* beri garis bawah di setiap akhir baris */
+}
+
+/*  title*/
+.data-tabel th{
+    background-color: #1e293b;
+    color: #f1f5f9;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* buat teks langsung jadi hufur besar smua */
+    letter-spacing: 0.5px;
+}
+
+.data-tabel td{
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* zebre stripes  */
+.data-tabel tbody tr:nth-child(even){
+    background-color: rgb(30, 41, 59 , 0.8);
+}
+/* row hover */
+.data-tabel tbody tr:hover{
+    background-color: #62789b;
+}
+
+/* responsive tabel ukuran layar mak 760px*/
+@media (max-width: 760px){
+    .data-tabel{font-size: 0.8rem;}
+    .data-tabel th,
+    .data-tabel td{
+        padding: 8px 10px;
+    }
+}
