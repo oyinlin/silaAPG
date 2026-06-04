@@ -17,7 +17,7 @@
     <header class="navbar">
         <div class="container navbar-inner">
             <a href="index.html" class="logo">🎓 SILA</a>
-            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <!-- <input type="checkbox" id="navToggle" class="nav-toggle"> -->
             <label for="navToggle" class="hamburger">
                 <span></span>
                 <span></span>
@@ -38,17 +38,16 @@
             <div class="container">
                 <h1>Ajukan Layanan Akademik</h1>
                 <p class="section-desc">Lengkapi form di bawah untuk mengajukan layanan akademik Anda.</p>
-
                 <!-- Nama lengkap, NIM, Prodi, Jenis layanan, Tanggal pngajuan, Kterangan -->
                 <!-- awal FORM -->
-                <form action="#" target="_blank" method="post" class="form-card">
+                <form action="#" method="post" class="form-card" onsubmit="return validasiForm()">
                     <fieldset>
                         <legend>Data Pengajuan</legend>
 
                         <!-- Input Nama Lengkap -->
                         <div class="form-group">
                             <label for="nama">Nama Lengkap</label>
-                            <input type="text" id="nama" required placeholder="masukkan nama lengkap">
+                            <input type="text" id="nama" placeholder="masukkan nama lengkap">
                         </div>
 
                         <!-- Nim dan Prodi -->
@@ -56,14 +55,14 @@
                             <!-- nim -->
                             <div class="form-group">
                                 <label for="nim">NIM</label>
-                                <input type="text" id="nim" required placeholder="contoh 241121###">
+                                <input type="text" id="nim" placeholder="contoh 241121###">
                             </div>
                             <!-- program studi -->
                             <div class="form-group">
                                 <label for="prodi">Program Studi</label>
                                 <!-- agar mudah di css -->
                                 <div></div>
-                                <select name="prodi" id="prodi" required>
+                                <select name="prodi" id="prodi" >
                                     <option value="">-- Pilih Program Studi --</option>
                                     <option value="Sistem Informasi">Sistem Informasi</option>
                                     <option value="Teknik Informatika">Teknik Informatika</option>
@@ -77,7 +76,7 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="jenis">Jenis Layanan</label >
-                                <select name="jenis" id="jenis" required>
+                                <select name="jenis" id="layanan">
                                     <option value="">--Pilih Layanan</option>
                                     <option value="SKA">SKA - Surat Aktif Kuliah</option>
                                     <option value="CAK">CAK - Cuti Akademik</option>
@@ -88,13 +87,13 @@
                             <!-- Tanggal -->
                             <div class="form-group">
                                 <label for="tanggal">Tanggal Pengajuan</label >
-                                <input type="date" id="tanggal" name="tanggal" required>
+                                <input type="date" id="tanggal" name="tanggal" >
                             </div>
                         </div>
                         <!-- Keterangan -->
                         <div class="form-group">
                             <label for="Keterangan">Keterangan</label>
-                            <textarea name="keterangan" id="keterangan" rows="3"placeholder="Jelaskan alasan pengajuan anda" required ></textarea>
+                            <textarea name="keterangan" id="keterangan" rows="3"placeholder="Jelaskan alasan pengajuan anda" ></textarea>
                         </div>
 
                         <!-- Button -->
@@ -132,6 +131,6 @@
             </div>
         </div>
     </footer>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
