@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
- 
+
 <body>
- 
-    <!-- HEADER & NAVIGASI -->
+
     <header class="navbar">
         <div class="container navbar-inner">
             <a href="index.html" class="logo">🎓 SILA</a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html">Beranda</a></li>
@@ -26,80 +31,44 @@
             </nav>
         </div>
     </header>
- 
+
     <main>
         <section class="section">
             <div class="container">
                 <h1>Riwayat Pengajuan</h1>
-                <p class="section-desc"> Daftar semua Pengajuan layanan Akademik<em></em></p>               
-                <!-- tabel  -->
-                <table class="data-tabel">
-                    <caption>Data Pengajuan Layanan Akademik</caption>
-                    <thead>
-                     <!-- head -->
-                        <tr>
-                            <!--no, nama , nim , layanan , tgl dan status -->
-                            <th>NO</th>
-                            <th>NIM</th>
-                            <th>Nama</th>
-                            <th>Layanan</th>
-                            <th>Tanggal</th>
-                            <th>status</th>
-                        </tr>
-                    </thead>
-                    <body>
-                        <!-- tampil data -->
-                        <!-- baris 1 -->
-                         <tr>
-                            <td>1</td>
-                            <td>213344553</td>
-                            <td>Caroline Yuliana</td>
-                            <td>SKA</td>
-                            <td> 1 Mei 2026</td>
-                            <td> Proses </td>
-                         </tr>
-                         <!-- baris 2 -->
-                         <tr>
-                            <td>2</td>
-                            <td>234667789</td>
-                            <td>Stephany Putri</td>
-                            <td>PDA</td>
-                            <td> 14 Mei 2026</td>
-                            <td> Proses </td>
-                         </tr>
-                         <!-- baris 3 -->
-                         <tr>
-                            <td>3</td>
-                            <td>2454755</td>
-                            <td>Kartika Ayu</td>
-                            <td>TNM</td>
-                            <td> 12 Mei 2026</td>
-                            <td> Proses </td>
-                         </tr><!-- baris 4 -->
-                         <tr>
-                            <td>4</td>
-                            <td>98078968</td>
-                            <td>Laure Olive</td>
-                            <td>CAK</td>
-                            <td> 18 Mei 2026</td>
-                            <td> selesai </td>
-                         </tr>
-                         <!-- baris 5 -->
-                         <tr>
-                            <td>5</td>
-                            <td>564534546</td>
-                            <td>Matthew Jack</td>
-                            <td>PDA</td>
-                            <td> 26 Mei 2026</td>
-                            <td> Proses </td>
-                         </tr>
-                    </body>
-                </table>
-                <!-- end tabel -->
+                <p class="section-desc">Daftar semua pengajuan layanan akademik yang telah Anda buat.</p>
+
+                <div class="toolbar">
+                    <span id="dataCount">0 pengajuan</span>
+                    <button id="btnHapusSemua" class="btn btn-outline" style="display: none;">🗑 Hapus Semua</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>NIM</th>
+                                <th>Layanan</th>
+                                <th>Tanggal</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- Data diisi oleh JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="emptyState" class="empty-state" style="display: none;">
+                    <p>🗂️ Belum ada pengajuan.</p>
+                    <a href="layanan.html" class="btn btn-primary">➕ Ajukan Layanan</a>
+                </div>
             </div>
         </section>
     </main>
- 
+
     <footer class="footer">
         <div class="container footer-inner">
             <div>
@@ -121,7 +90,9 @@
             </div>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
+
 </body>
- 
+
 </html>
